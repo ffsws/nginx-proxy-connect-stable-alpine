@@ -90,7 +90,7 @@ COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 # Basic sanity testing.
 RUN nginx -V 2>&1 && nginx -t && ldd /usr/sbin/nginx && apk list && rm -rf /run/nginx.pid /var/cache/nginx/*_temp
 
-EXPOSE 80
+#EXPOSE 80
 
 STOPSIGNAL SIGTERM
 
